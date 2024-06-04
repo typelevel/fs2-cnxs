@@ -22,3 +22,4 @@ http4s:
 ## Design Constraints
 
 - If this functionality is incorporated in to fs2-io, it cannot depend on otel4s (as otel4s depends on fs2). Metrics would need to be exposed via an API that another library bridges to otel4s.
+  - Maybe this is enough of a reason to keep fs2-cnxs as a separate library (and with an otel4s dependency)?
