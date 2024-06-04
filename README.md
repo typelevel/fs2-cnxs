@@ -7,6 +7,7 @@ Specifically:
 - Support both single and pooled connections.
 - Health checking
 - Proper idle/eof handling
+- Detailed metrics describing pool state
 
 
 ## Examples usage of fs2 client sockets
@@ -18,4 +19,6 @@ Skunk's session and pool apis:
 http4s:
 - `EmberConnection`: https://github.com/http4s/http4s/blob/main/ember-client/shared/src/main/scala/org/http4s/ember/client/EmberConnection.scala#L27-L39
 
+## Design Constraints
 
+- If this functionality is incorporated in to fs2-io, it cannot depend on otel4s (as otel4s depends on fs2). Metrics would need to be exposed via an API that another library bridges to otel4s.
