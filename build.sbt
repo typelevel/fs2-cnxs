@@ -5,6 +5,7 @@ ThisBuild / crossScalaVersions := List("3.3.3", "2.13.12")
 
 ThisBuild / tlBaseVersion := "0.1"
 
+ThisBuild / startYear := Some(2024)
 ThisBuild / licenses := List(("MIT", url("http://opensource.org/licenses/MIT")))
 
 lazy val root = tlCrossRootProject.aggregate(core)
@@ -13,6 +14,7 @@ lazy val core = crossProject(JVMPlatform, JSPlatform, NativePlatform)
   .in(file("core"))
   .settings(
     name := "fs2-cnxs",
+    headerLicense := Some(HeaderLicense.MIT("2024", "Typelevel")),
     libraryDependencies ++= Seq(
       "co.fs2" %%% "fs2-io" % "3.10.2",
       "org.typelevel" %%% "munit-cats-effect" % "2.0.0" % Test,
