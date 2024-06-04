@@ -1,7 +1,7 @@
 ThisBuild / organization := "co.fs2"
 
 ThisBuild / scalaVersion := "3.3.3"
-ThisBuild / crossScalaVersions := List("3.3.3", "2.13.12")
+ThisBuild / crossScalaVersions := List("3.3.3", "2.13.13")
 
 ThisBuild / tlBaseVersion := "0.1"
 
