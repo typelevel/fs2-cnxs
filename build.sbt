@@ -14,7 +14,6 @@ lazy val core = crossProject(JVMPlatform, JSPlatform, NativePlatform)
   .in(file("core"))
   .settings(
     name := "fs2-cnxs",
-    headerLicense := Some(HeaderLicense.MIT("2024", "Typelevel")),
     libraryDependencies ++= Seq(
       "co.fs2" %%% "fs2-io" % "3.10.2",
       "org.typelevel" %%% "munit-cats-effect" % "2.0.0" % Test,
