@@ -1,7 +1,7 @@
 ThisBuild / organization := "co.fs2"
 
-ThisBuild / scalaVersion := "3.3.3"
-ThisBuild / crossScalaVersions := List("3.3.3", "2.13.13")
+ThisBuild / scalaVersion := "3.3.6"
+ThisBuild / crossScalaVersions := List("3.3.6", "2.13.16")
 
 ThisBuild / tlBaseVersion := "0.1"
 
@@ -15,8 +15,8 @@ lazy val core = crossProject(JVMPlatform, JSPlatform, NativePlatform)
   .settings(
     name := "fs2-cnxs",
     libraryDependencies ++= Seq(
-      "co.fs2" %%% "fs2-io" % "3.10.2",
-      "org.typelevel" %%% "munit-cats-effect" % "2.0.0" % Test,
+      "co.fs2" %%% "fs2-io" % "3.13.0-M5",
+      "org.typelevel" %%% "munit-cats-effect" % "2.1.0" % Test,
       "org.typelevel" %%% "scalacheck-effect-munit" % "2.0.0-M2" % Test
     )
   )
